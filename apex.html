@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geolocation Practice</title>
+</head>
+<body>
+    <h2>My Current Location (Practice)</h2>
+    <button onclick="getLocation()">Show My Coordinates</button>
+    <p id="output">Click the button to test browser permission.</p>
+
+    <script>
+        function getLocation() {
+            const output = document.getElementById("output");
+
+            // Check if the browser supports Geolocation
+            if (!navigator.geolocation) {
+                output.textContent = "Geolocation is not supported by your browser.";
+                return;
+            }
+
+            output.textContent = "Requesting permission...";
+
+            // Request the current device's location
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    output.textContent = `Latitude: ${lat}, Longitude: ${lon}`;
+                },
+                (error) => {
+                    output.textContent = `Error: ${error.message}`;
+                }
+            );
+        }
+        navigator.geolocation.getCurrentPosition(
+    (position) => {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        const accuracy = position.coords.accuracy; // Accuracy in meters
+        output.textContent = `Latitude: ${lat}, Longitude: ${lon} (Accuracy: ${accuracy} meters)`;
+    },
+    (error) => {
+        output.textContent = `Error: ${error.message}`;
+    },
+    {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 0
+    }
+);
+    </script>
+</body>
+</html>
