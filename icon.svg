@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>Asma ul Husna - 99 Names of Allah</title>
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#102c38"/>
+      <stop offset="1" stop-color="#111225"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff0bd"/>
+      <stop offset="1" stop-color="#e8bb61"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#night)"/>
+  <circle cx="256" cy="248" r="205" fill="none" stroke="#f1ce7b" stroke-opacity=".3" stroke-width="2"/>
+  <circle cx="256" cy="248" r="185" fill="none" stroke="#c3f0df" stroke-opacity=".22" stroke-width="2"/>
+  <path d="M256 68 274 82 296 75 304 97 326 104 322 128 339 144 325 164 331 187 308 197 299 219 275 216 256 234 237 216 213 219 204 197 181 187 187 164 173 144 190 128 186 104 208 97 216 75 238 82Z" fill="none" stroke="url(#gold)" stroke-opacity=".75" stroke-width="3"/>
+  <circle cx="256" cy="151" r="8" fill="#f1ce7b"/>
+  <circle cx="144" cy="248" r="5" fill="#c3f0df"/>
+  <circle cx="368" cy="248" r="5" fill="#c3f0df"/>
+  <text x="256" y="306" fill="url(#gold)" font-family="Georgia, 'Times New Roman', serif" font-size="170" font-weight="600" letter-spacing="-8" text-anchor="middle">99</text>
+  <path d="M156 345h200" stroke="#c3f0df" stroke-opacity=".55" stroke-width="2"/>
+  <text x="256" y="408" fill="#f1ce7b" font-family="Amiri, 'Noto Naskh Arabic', serif" font-size="30" text-anchor="middle" direction="rtl" unicode-bidi="plaintext">أَسْمَاءُ اللَّهِ الْحُسْنَى</text>
+</svg>

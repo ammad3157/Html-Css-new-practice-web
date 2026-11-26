@@ -3,59 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malik Portfolio Wed site </title>
-      <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#080e19">
+    <meta name="description" content="Explore the 99 beautiful names of Allah with meanings and Arabic pronunciation.">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>99 Names of Allah</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <! --- Link title -- >
-  <nav class="navbar"> 
-    <a href="#home">Home</a>
-    <a href="#table-section">My info</a>
-    <a href="#Contact">Contact me</a>
-  </nav>
-  <div id="home" class="container">
-    <h1>Welcome to my website</h1>
-    <img src="images.jpg" alt="image cycle" height="300">
-  </div>
-  <div id="table-section" class="container">
-  </div>
-    <table>
-      <thead>
-        <tr>
-          <th colspan="2">Name</th>
-          <th rowspan="2">Type of skills</th>
-          <th rowspan="2">Request</th>
-        </tr>
-      </thead>
-<thead>
+    <section class="splash-screen" id="splashScreen" aria-labelledby="splashTitle">
+        <div class="splash-content">
+            <img class="splash-logo" src="icon.svg" alt="Asma ul Husna logo">
+            <p class="splash-eyebrow">A beautiful remembrance</p>
+            <h1 id="splashTitle" lang="ar" dir="rtl">أَسْمَاءُ اللَّهِ الْحُسْنَى</h1>
+            <p class="splash-subtitle">The 99 Beautiful Names of Allah</p>
+            <button class="next-button" id="splashNextButton" type="button">Next <span aria-hidden="true">→</span></button>
+        </div>
+    </section>
 
-            
-         
-       
-  
+    <main class="page" id="appContent" hidden>
+        <header class="hero">
+            <p class="eyebrow" lang="ar" dir="rtl">أَسْمَاءُ اللَّهِ الْحُسْنَى</p>
+            <h1 id="appHeading" tabindex="-1">99 Names of Allah</h1>
+            <p class="arabic-intro">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+            <p class="intro">Beautiful names, qualities, and attributes of Allah</p>
+            <button class="install-button" id="installAppButton" type="button" hidden>Install App</button>
+        </header>
 
-    </thead>
-      <tbody>
-            <tr>
-              <td style="background-color: burlywood;" colspan="2">Malik</td> 
-            <td style="background-color: burlywood;" rowspan="2">web programing</td>
-           <td  style="background-color:burlywood;" rowspan="2"> Please pray for Plaiestein</td>
-         </tr>
-       </tbody>
-      </table>
-      <div id="contact" class="container">
-      <h2>Comtact Me</h2>
-  <form>
-      <label>Your Name</label>
-          <input type="text" placeholder="Apna name lko" required>
+        <section class="names-grid" id="namesGrid" aria-label="Names of Allah"></section>
 
-          <label>Email Addrees :</label>
-          <input type="text" placeholder=" Email @ . com ">
-
-          <label> What is your message</label>
-          <textarea rows="4" placeholder="Message"></textarea>
-          <button type="submit"> Send message</button>
-          </form>
-      </div>
-    </body>
+        <footer>
+            <p>ٱللّٰه</p>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
 </html>

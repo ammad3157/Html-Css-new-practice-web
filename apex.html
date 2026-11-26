@@ -1,54 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Geolocation Practice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080e19">
+    <meta name="description" content="Explore the 99 beautiful names of Allah with meanings and Arabic pronunciation.">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>99 Names of Allah</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h2>My Current Location (Practice)</h2>
-    <button onclick="getLocation()">Show My Coordinates</button>
-    <p id="output">Click the button to test browser permission.</p>
+    <section class="splash-screen" id="splashScreen" aria-labelledby="splashTitle">
+        <div class="splash-content">
+            <img class="splash-logo" src="icon.svg" alt="Asma ul Husna logo">
+            <p class="splash-eyebrow">A beautiful remembrance</p>
+            <h1 id="splashTitle" lang="ar" dir="rtl">أَسْمَاءُ اللَّهِ الْحُسْنَى</h1>
+            <p class="splash-subtitle">The 99 Beautiful Names of Allah</p>
+            <button class="next-button" id="splashNextButton" type="button">Next <span
+                    aria-hidden="true">→</span></button>
+        </div>
+    </section>
 
-    <script>
-        function getLocation() {
-            const output = document.getElementById("output");
+    <main class="page" id="appContent" hidden>
+        <header class="hero">
+            <p class="eyebrow" lang="ar" dir="rtl">أَسْمَاءُ اللَّهِ الْحُسْنَى</p>
+            <h1 id="appHeading" tabindex="-1">99 Names of Allah</h1>
+            <p class="arabic-intro">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+            <p class="intro">Beautiful names, qualities, and attributes of Allah</p>
+            <button class="install-button" id="installAppButton" type="button" hidden>Install App</button>
+        </header>
 
-            // Check if the browser supports Geolocation
-            if (!navigator.geolocation) {
-                output.textContent = "Geolocation is not supported by your browser.";
-                return;
-            }
+        <section class="names-grid" id="namesGrid" aria-label="Names of Allah"></section>
 
-            output.textContent = "Requesting permission...";
-
-            // Request the current device's location
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    const lat = position.coords.latitude;
-                    const lon = position.coords.longitude;
-                    output.textContent = `Latitude: ${lat}, Longitude: ${lon}`;
-                },
-                (error) => {
-                    output.textContent = `Error: ${error.message}`;
-                }
-            );
-        }
-        navigator.geolocation.getCurrentPosition(
-    (position) => {
-        const lat = position.coords.latitude;
-        const lon = position.coords.longitude;
-        const accuracy = position.coords.accuracy; // Accuracy in meters
-        output.textContent = `Latitude: ${lat}, Longitude: ${lon} (Accuracy: ${accuracy} meters)`;
-    },
-    (error) => {
-        output.textContent = `Error: ${error.message}`;
-    },
-    {
-        enableHighAccuracy: true,
-        timeout: 10000,
-        maximumAge: 0
-    }
-);
-    </script>
+        <footer>
+            <p>ٱللّٰه</p>
+        </footer>
+    </main>
+    <script src="script.js"></script>
 </body>
+
 </html>
